@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
-import type { QuickDoc } from "../types/search";
+import type { SearchDoc } from "../types/search";
 
 
 function bookIdFromKey(key: string) {
@@ -10,7 +10,7 @@ function bookIdFromKey(key: string) {
 
 export default function QuickSearchBar() {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState<QuickDoc[]>([]);
+  const [results, setResults] = useState<SearchDoc[]>([]);
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -43,7 +43,7 @@ export default function QuickSearchBar() {
         );
         if (!res.ok) throw new Error("Fetch failed");
         const data = await res.json();
-        setResults((data.docs ?? []) as QuickDoc[]);
+        setResults((data.docs ?? []) as SearchDoc[]);
       } catch (e) {
         if ((e as any)?.name !== "AbortError") {
           setResults([]);

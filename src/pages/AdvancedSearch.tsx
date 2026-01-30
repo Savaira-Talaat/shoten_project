@@ -6,7 +6,7 @@ const initalFilters: AdvancedSearchFilters = {
     title: "",
     author: "",
     subject: "",
-    language: "",
+    publisher: "",
     year: "",
 };
 
@@ -33,13 +33,13 @@ function AdvancedSearch () {
         const title = filters.title.trim();
         const author = filters.author.trim();
         const subject = filters.subject.trim();
-        const language = filters.language.trim();
+        const publisher = filters.publisher.trim();
         const year = filters.year.trim();
 
         if (title) params.set("title", title);
         if (author) params.set("author", author);
         if (subject) params.set("subject", subject);
-        if (language) params.set("language", language);
+        if (publisher) params.set("publisher", publisher);
         if (year) params.set("year", year);
 
         params.set("limit", "20");
@@ -100,13 +100,13 @@ function AdvancedSearch () {
             </div>
 
             <div style={styles.field}>
-                <label style={styles.label}>Langue</label>
+                <label style={styles.label}>Éditeur</label>
                 <input
-                name="language"
-                value={filters.language}
+                name="publisher"
+                value={filters.publisher}
                 onChange={handleChange}
                 style={styles.input}
-                placeholder="ex: eng / fre"
+                placeholder="ex: Chilton Books"
                 />
             </div>
 
@@ -125,7 +125,7 @@ function AdvancedSearch () {
 
             <div style={styles.actions}>
             <button type="button" onClick={onReset} style={styles.secondaryBtn}>
-                Reset
+                Réinitialiser
             </button>
 
             <button

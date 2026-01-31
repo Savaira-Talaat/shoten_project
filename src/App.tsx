@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
-import Home from './pages/Home';
+import Accueil from './pages/Acceuil';
 import Search from './pages/Search';
 import AdvancedSearch from './pages/AdvancedSearch';
 import Navbar from './components/Navbar';
@@ -14,13 +13,10 @@ function App() {
         <Navbar />
         <main className="container">
           <Routes>
-            <Route path="/" element={<Home />} />
-<<<<<<< HEAD
+            <Route path="/" element={<Accueil />} />
             <Route path="/book/:id" element={<BookDetail />} />
-=======
             <Route path="/search" element={<Search />} />
             <Route path="advanced-search" element={<AdvancedSearch/>} />
->>>>>>> 396a21b510474889de48c7ffabb5f805b65c0e5e
           </Routes>
         </main>
       </div>

@@ -1,4 +1,4 @@
-import { screen, fireEvent, waitFor } from '@testing-library/react';
+import { screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import AdvancedSearch from '../pages/AdvancedSearch';
 import { renderWithRouter } from './renderWithRouter';

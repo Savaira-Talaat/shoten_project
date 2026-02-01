@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Accueil from './pages/Acceuil';
+import Accueil from './pages/Home';
 import Search from './pages/Search';
 import AdvancedSearch from './pages/AdvancedSearch';
 import Navbar from './components/Navbar';

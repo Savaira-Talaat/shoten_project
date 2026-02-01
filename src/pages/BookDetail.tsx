@@ -1,27 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
-//work car l'api qui nom les livre comme ça, genre oeuvre
-type Work = {
-  title: string;
-  description?: string | { value: string };
-  authors?: {
-    author: {key: string;};
-  }[];
-};
-
-type WikiData = {
-  extract?: string; // résumé
-  originalimage?: {
-    source: string; // image HD
-  };
-  content_urls?: {
-    desktop?: {
-      page: string; // lien Wikipedia
-    };
-  };
-};
-
+import type { Work, WikiData } from "../types/bookDetails";
 
 export default function BookDetail() {
 

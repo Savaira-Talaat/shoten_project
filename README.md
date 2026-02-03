@@ -6,10 +6,9 @@ Il s'agit d'un site web de recherche de livres en utilisant l'api de OpenLibrary
 
 ## Installation
 
-1. **Cloner le projet**
+1. **Se placer dans le projet**
    ```bash
-   git clone https://github.com/Savaira-Talaat/shoten_project.git
-   cd shoten
+   cd shoten_project
    ```
 
 2. **Installer les dépendances**
@@ -32,7 +31,7 @@ Puis ouvrir sur le navigateur **http://localhost:5173**
 ## Lancer les tests
 
 ```bash
-npm test
+npm run test
 ```
 
 
